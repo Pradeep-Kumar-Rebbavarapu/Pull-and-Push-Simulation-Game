@@ -9,7 +9,7 @@ export const AuthContexProvider = ({ children }) => {
   );
   // const [p_components,setComponents]=useState(null);
   const login = async (inputs) => {
-    const res = await axios.post("/auth/login", inputs);
+    const res = await axios.post("https://pull-and-push-game.onrender.com/api/auth/login", inputs);
     setCurrentUser(res.data);
     // setComponents({
     //   speaker:0,button:0,screen:0
@@ -17,7 +17,7 @@ export const AuthContexProvider = ({ children }) => {
   };
 
   const logout = async (inputs) => {
-    await axios.post("/auth/logout");
+    await axios.post("https://pull-and-push-game.onrender.com/api/auth/logout");
     setCurrentUser(null);
     // setComponents(null);
   };
