@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:["http://localhost:3000","https://pull-and-push-simulation-game.vercel.app"]
 }));
 
 
